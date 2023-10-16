@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:master/Widgets/custom_appbar.dart';
 import '../../../../Widgets/custom_TextFormFiled.dart';
-import '../../../../Widgets/custom_cart_profile.dart';
 
+
+// ignore: must_be_immutable
 class EditeProfileScreen extends StatelessWidget {
    EditeProfileScreen({Key? key}) : super(key: key);
   static String editeProfileRoute = 'editeProfileRoute';

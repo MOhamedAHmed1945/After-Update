@@ -8,14 +8,14 @@ class DetailsScreen extends StatelessWidget {
     required this.newsModel,
   }) : super(key: key);
   static String detailsRoute = 'detailsRoute';
-  final DataNewsModel newsModel;
+  final Article newsModel;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(newsModel.newsImage),
+          image: NetworkImage(newsModel.image),
           fit: BoxFit.cover,
         ),
       ),
@@ -59,7 +59,7 @@ class DetailsScreen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              newsModel.newsTitle,
+                              newsModel.title,
                               style: TextStyle(
                                 fontSize: 23,
                                 fontWeight: FontWeight.w600,
@@ -87,7 +87,7 @@ class DetailsScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 25),
                       Text(
-                        newsModel.newsDescription,
+                        newsModel.description,
                         style: TextStyle(
                           color: Colors.black54,
                           fontSize: 16,

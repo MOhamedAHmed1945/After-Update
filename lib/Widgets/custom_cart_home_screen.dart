@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import '../Models/data_news_model.dart';
+import 'package:intl/intl.dart';
 
 class CustomCartHomeScreen extends StatelessWidget {
-  final DataNewsModel newsModel;
+  final Article newsModel;
   const CustomCartHomeScreen({Key? key, required this.newsModel})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final formattedDate = DateFormat.yMMMd().format(newsModel.publishedAt);
     return Padding(
       padding: const EdgeInsets.only(bottom: 10.0),
       child: ClipRRect(
@@ -27,7 +29,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
-                      image: AssetImage(newsModel.newsImage),
+                      image: NetworkImage(newsModel.image),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -46,7 +48,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                               horizontal: 10, vertical: 10),
                           child: Center(
                             child: Text(
-                              newsModel.newsDescription,
+                              newsModel.description,
                               style: TextStyle(
                                 fontFamily: "Avenir",
                                 fontSize: 16,
@@ -65,7 +67,8 @@ class CustomCartHomeScreen extends StatelessWidget {
                   height: 10,
                 ),
                 Text(
-                  newsModel.newsTime,
+                  // newsModel.publishedAt.toString(),
+                  formattedDate,
                   style: TextStyle(
                     fontFamily: "Times",
                     fontSize: 13,
@@ -76,7 +79,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                   height: 7,
                 ),
                 Text(
-                  newsModel.newsTitle,
+                  newsModel.title,
                   style: TextStyle(
                     fontFamily: "League",
                     fontSize: 23,

@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 
 import '../Models/category_news_model.dart';
 
+// ignore: must_be_immutable
 class CustomCategory extends StatelessWidget {
   //final String image;
   //final String title;
   CategoryNewsModel categoryNewsModel;
   CustomCategory(
-      { //required this.image, required this.title,
-      required this.categoryNewsModel});
+      {
+        super.key,  //required this.image, required this.title,
+      required this.categoryNewsModel,
+      });
 
   @override
   Widget build(BuildContext context) {

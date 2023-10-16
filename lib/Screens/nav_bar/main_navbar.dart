@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:master/Screens/nav_bar/nav_bar_screens/profile_screens/profile_screen.dart';
 import 'nav_bar_screens/categories_screen.dart';
-import 'nav_bar_screens/explore_screen.dart';
 import 'nav_bar_screens/home_screen.dart';
 import 'nav_bar_screens/settings_screen.dart';
 

@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 
 class CustomTextFormFiled extends StatelessWidget {
@@ -21,7 +23,6 @@ class CustomTextFormFiled extends StatelessWidget {
         controller: controller,
         keyboardType: textInputType,
         decoration: InputDecoration(
-
           enabledBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.transparent),
             borderRadius: BorderRadius.circular(5.5),
@@ -45,6 +46,5 @@ class CustomTextFormFiled extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }
