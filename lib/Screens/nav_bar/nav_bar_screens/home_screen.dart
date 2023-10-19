@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         final articles = snapshot.data!;
                         return ListView.builder(
                           padding: EdgeInsets.symmetric(horizontal: 15),
-                          itemCount: articles.length,
+                          itemCount: 5,//articles.length,
                           itemBuilder: (context, index) {
                             return InkWell(
                               onTap: () {

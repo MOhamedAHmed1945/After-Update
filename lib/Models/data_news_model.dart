@@ -1,33 +1,33 @@
 class Article {
   final String title;
   final String description;
-  final String content;
-  final String url;
+  //final String content;
+  //final String url;
   final String image;
   final DateTime publishedAt;
-  final Map<String, dynamic> source;
+  //final Map<String, dynamic> source;
 
   Article({
     required this.title,
     required this.description,
-    required this.content,
-    required this.url,
+    //required this.content,
+    //required this.url,
     required this.image,
     required this.publishedAt,
-    required this.source,
+    //required this.source,
   });
 
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
       title: json['title'],
       description: json['description'],
-      content: json['content'],
-      url: json['url'],
-      image: json['image'],
+      //content: json['content'],
+      //url: json['url'],
+      image: json['image'].toString(),
       //'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
       //json['image'],
       publishedAt: DateTime.parse(json['publishedAt']),
-      source: json['source'],
+      //source: json['source'],
     );
   }
 }
