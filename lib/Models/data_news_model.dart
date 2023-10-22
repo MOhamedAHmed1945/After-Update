@@ -32,27 +32,11 @@ class DataNewsModel {
 
 }
 /*
-class TestModel {
-  final String title;
-  final String description;
-  final String urlToImage;
-  final DateTime publishedAt;
-  TestModel({
-    required this.title,
-    required this.description,
-    required this.urlToImage,
-    required this.publishedAt,
-
-  });
-}
-
 class DataNewsModel {
   String newsImage;
   String newsTitle;
   String newsDescription;
   String newsTime;
-
-
   DataNewsModel({
     this.newsImage =
         //'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
@@ -61,7 +45,7 @@ class DataNewsModel {
         'Beyond Big Tech: Alternative ways to invest in A.I., according to two ETF experts',
     this.newsTime = '07 May  07:19',
     this.newsDescription =
-        'The idea of establishing Al Ahly came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
+        'The idea of establishing  came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
   });
 
   factory DataNewsModel.fromJson(jsonData) {
@@ -83,17 +67,17 @@ List<DataNewsModel> allNewsOfList = [
         // 'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
         'assets/images/World.jpeg',
     newsDescription:
-        'The idea of establishing Al Ahly came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
+        'The idea of establishing  came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
   ),
   DataNewsModel(
     newsTitle:
-        'FDA Approves Zurzuvae, First Pill For Postpartum Depression, What You Need To Know',
+        ' First Pill For Postpartum Depression, What You Need To Know',
     newsTime: '07 May  07:19',
     newsImage:
         //'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
         'assets/images/World.jpeg',
     newsDescription:
-        'The idea of establishing Al Ahly came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
+        'The idea of establishing came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
   ),
   DataNewsModel(
     newsTitle: 'Billion-Year Data Archive Expands Beyond Moon: Next Stop, Mars',
@@ -101,7 +85,7 @@ List<DataNewsModel> allNewsOfList = [
     newsImage: 'assets/images/World.jpeg',
     //'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
     newsDescription:
-        'The idea of establishing Al Ahly came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
+        'The idea of establishing  came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
   ),
   DataNewsModel(
     newsTitle:
@@ -110,7 +94,7 @@ List<DataNewsModel> allNewsOfList = [
     newsImage: 'assets/images/World.jpeg',
     //'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
     newsDescription:
-        'The idea of establishing Al Ahly came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
+        'The idea of establishing  came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
   ),
   DataNewsModel(
     newsTitle: 'Elon Musk Reacts As Tesla Competitor Nikolas Shares Slump',
@@ -118,16 +102,16 @@ List<DataNewsModel> allNewsOfList = [
     newsImage: 'assets/images/World.jpeg',
     //'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
     newsDescription:
-        'The idea of establishing Al Ahly came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
+        'The idea of establishing  came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
   ),
   DataNewsModel(
     newsTitle:
-        'Elon Musk touts short-term Treasurys as a echoing Warren Buffett and Bill Ackman',
+        'Elon Musk touts short-term  as a echoing Warren Buffett and Bill ',
     newsTime: '07 May  07:19',
     newsImage: 'assets/images/World.jpeg',
     //'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
     newsDescription:
-        'The idea of establishing Al Ahly came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
+        'The idea of establishing  came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
   ),
 ];
 */
