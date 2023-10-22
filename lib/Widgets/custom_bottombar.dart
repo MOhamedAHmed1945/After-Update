@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../Models/data_news_model.dart';
 
-class CustomBottombar extends StatelessWidget {
-  const CustomBottombar({Key? key, required this.newsModel}) : super(key: key);
+class CustomButtonBar extends StatelessWidget {
+  const CustomButtonBar({Key? key, required this.newsModel}) : super(key: key);
   final DataNewsModel newsModel;
 
   @override
@@ -33,7 +33,7 @@ class CustomBottombar extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      newsModel.newsTitle,
+                      newsModel.titleNew,
                       style: TextStyle(
                         fontSize: 23,
                         fontWeight: FontWeight.w600,
@@ -58,7 +58,7 @@ class CustomBottombar extends StatelessWidget {
                 ),
                 SizedBox(height: 25),
                 Text(
-                  newsModel.newsDescription,
+                  newsModel.contentNew.toString(),
                   style: TextStyle(
                     color: Colors.black54,
                     fontSize: 16,

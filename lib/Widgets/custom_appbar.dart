@@ -11,7 +11,7 @@ class CustomAppBar extends StatelessWidget {
     this.actionFunction,
     this.actionIcon,
   }) : super(key: key);
-  Function? leadingFunction;
+  void Function()? leadingFunction;
   IconData? leadingIcon;
   String title;
   Color? colorTitle;

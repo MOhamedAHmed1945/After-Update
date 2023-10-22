@@ -12,9 +12,11 @@ class CategoriesScreen extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(90),
           child: CustomAppBar(
+            actionFunction: (){},
             leadingIcon: Icons.menu,
             title: 'Categories',
             colorTitle: Colors.black,
+            leadingFunction: (){},
           ),
         ),
         body: Padding(
@@ -28,9 +30,9 @@ class CategoriesScreen extends StatelessWidget {
               crossAxisSpacing: 10.0,
             ),
             itemBuilder: (
-              BuildContext context,
-              int index,
-            ) {
+                BuildContext context,
+                int index,
+                ) {
               return InkWell(
                 onTap: () {
                   // Navigator.push(

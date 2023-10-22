@@ -1,35 +1,49 @@
-class Article {
-  final String title;
-  final String description;
-  //final String content;
-  //final String url;
-  final String image;
-  final DateTime publishedAt;
-  //final Map<String, dynamic> source;
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 
-  Article({
-    required this.title,
-    required this.description,
-    //required this.content,
-    //required this.url,
-    required this.image,
-    required this.publishedAt,
-    //required this.source,
+class DataNewsModel {
+  final String titleNew;
+  final String? descriptionNew;
+  final String imageNew;
+  final DateTime publishedAtTime;
+  final String? contentNew;
+  final String? sourceNew;
+  final String? linkMasterNew;
+  DataNewsModel(  {
+    required this.titleNew,
+     this.descriptionNew,
+    required this.imageNew,
+    required this.publishedAtTime,
+    this.contentNew,
+    this.sourceNew,
+    this.linkMasterNew,
   });
 
-  factory Article.fromJson(Map<String, dynamic> json) {
-    return Article(
-      title: json['title'],
-      description: json['description'],
-      //content: json['content'],
-      //url: json['url'],
-      image: json['image'].toString(),
-      //'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
-      //json['image'],
-      publishedAt: DateTime.parse(json['publishedAt']),
-      //source: json['source'],
+  factory DataNewsModel.fromJson(Map<String, dynamic> json) {
+    return DataNewsModel(
+      titleNew: json['title'].toString(),
+      descriptionNew: json['description'].toString(),
+      imageNew: json['urlToImage'].toString(),
+      publishedAtTime: DateTime.parse(json['publishedAt']),
+      linkMasterNew : json['url'].toString(),
+      contentNew : json['content'].toString(),
+      sourceNew: json['source']['name'].toString(),
     );
   }
+
+}
+/*
+class TestModel {
+  final String title;
+  final String description;
+  final String urlToImage;
+  final DateTime publishedAt;
+  TestModel({
+    required this.title,
+    required this.description,
+    required this.urlToImage,
+    required this.publishedAt,
+
+  });
 }
 
 class DataNewsModel {
@@ -37,6 +51,7 @@ class DataNewsModel {
   String newsTitle;
   String newsDescription;
   String newsTime;
+
 
   DataNewsModel({
     this.newsImage =
@@ -115,3 +130,4 @@ List<DataNewsModel> allNewsOfList = [
         'The idea of establishing Al Ahly came in the first 10 years of the 20th century and was firstly raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of the High School Students Club, which was established in 1905. The establishment of a club for high school students was for political reasons, and the students needed a sports club to gather them for leisure and exercise.',
   ),
 ];
+*/

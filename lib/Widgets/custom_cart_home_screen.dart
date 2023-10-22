@@ -3,12 +3,12 @@ import '../Models/data_news_model.dart';
 import 'package:intl/intl.dart';
 
 class CustomCartHomeScreen extends StatelessWidget {
-  final Article newsModel;
+  final DataNewsModel newsModel;
   const CustomCartHomeScreen({Key? key, required this.newsModel})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final formattedDate = DateFormat.yMMMd().format(newsModel.publishedAt);
+    final formattedDate = DateFormat.yMMMd().format(newsModel.publishedAtTime);
     return Padding(
       padding: const EdgeInsets.only(bottom: 10.0),
       child: ClipRRect(
@@ -29,7 +29,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
-                      image: NetworkImage(newsModel.image),
+                      image: NetworkImage(newsModel.imageNew),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -48,7 +48,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                               horizontal: 10, vertical: 10),
                           child: Center(
                             child: Text(
-                              newsModel.description,
+                              newsModel.contentNew.toString(),
                               style: TextStyle(
                                 fontFamily: "Avenir",
                                 fontSize: 16,
@@ -79,7 +79,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                   height: 7,
                 ),
                 Text(
-                  newsModel.title,
+                  newsModel.titleNew,
                   style: TextStyle(
                     fontFamily: "League",
                     fontSize: 23,

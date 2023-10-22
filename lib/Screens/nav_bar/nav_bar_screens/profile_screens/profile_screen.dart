@@ -48,22 +48,23 @@ class ProfileScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 30),
                   Text(
-                    'Developer_2023@gmail.com',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.w600,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.white,
-                    ),
-                  ),
-                  SizedBox(height: 10),
-                  Text(
-                    'mostafa mohamed',
+                    'MOHAMED AHMED',
                     style: TextStyle(
                       fontSize: 25,
                       color: Colors.white,
                       fontWeight: FontWeight.w600,
                       letterSpacing: 2,
+                    ),
+                  ),
+                  SizedBox(height: 10),
+
+                  Text(
+                    'News_Admin@gmail.com',
+                    style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                      fontStyle: FontStyle.italic,
+                      color: Colors.white,
                     ),
                   ),
                 ],
@@ -123,37 +124,3 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 }
-
-/*
-
-Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topRight: Radius.circular(15),
-              topLeft: Radius.circular(15),
-            ),
-            color: Colors.green,
-          ),
-          child: Column(
-            children: [
-              SizedBox(height: 30),
-              CustomCartProfile(
-                icon: Icons.flag,
-                text: 'Egypt',
-              ),
-              CustomCartProfile(
-                icon: Icons.apartment,
-                text: 'Alex',
-              ),
-              CustomCartProfile(
-                icon: Icons.phone,
-                text: '01212345678',
-              ),
-              CustomCartProfile(
-                icon: Icons.account_tree_outlined,
-                text: 'Egyption',
-              ),
-            ],
-          ),
-
- */

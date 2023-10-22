@@ -7,11 +7,10 @@ class CustomCategory extends StatelessWidget {
   //final String image;
   //final String title;
   CategoryNewsModel categoryNewsModel;
-  CustomCategory(
-      {
-        super.key,  //required this.image, required this.title,
-      required this.categoryNewsModel,
-      });
+  CustomCategory({
+    super.key, //required this.image, required this.title,
+    required this.categoryNewsModel,
+  });
 
   @override
   Widget build(BuildContext context) {

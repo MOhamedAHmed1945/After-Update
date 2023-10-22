@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:master/Widgets/custom_appbar.dart';
 import '../Models/data_news_model.dart';
 
-class DetailsScreen extends StatelessWidget {
-  DetailsScreen({
+class NewsDetailsScreen extends StatelessWidget {
+  const NewsDetailsScreen({
     Key? key,
-    required this.newsModel,
+    required this.dataNewsModel,
   }) : super(key: key);
   static String detailsRoute = 'detailsRoute';
-  final Article newsModel;
+  final DataNewsModel dataNewsModel;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: NetworkImage(newsModel.image),
+          image: NetworkImage(dataNewsModel.imageNew),
           fit: BoxFit.cover,
         ),
       ),
@@ -59,7 +59,7 @@ class DetailsScreen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              newsModel.title,
+                              dataNewsModel.titleNew,
                               style: TextStyle(
                                 fontSize: 23,
                                 fontWeight: FontWeight.w600,
@@ -87,9 +87,19 @@ class DetailsScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 25),
                       Text(
-                        newsModel.description,
+
+                        dataNewsModel.contentNew.toString(),
                         style: TextStyle(
                           color: Colors.black54,
+                          fontSize: 16,
+                        ),
+                        textAlign: TextAlign.justify,
+                      ),
+                      SizedBox(height: 20),
+                      Text(
+                       'Source : ${ dataNewsModel.sourceNew.toString()}',
+                        style: TextStyle(
+                          color: Colors.black,
                           fontSize: 16,
                         ),
                         textAlign: TextAlign.justify,
@@ -99,29 +109,25 @@ class DetailsScreen extends StatelessWidget {
                         children: [
                           Padding(
                             padding: EdgeInsets.only(right: 5),
-                            child: Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Image.asset(
-                                  'assets/images/1.jpg',
-                                  fit: BoxFit.cover,
-                                  width: 120,
-                                  height: 90,
-                                ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image.asset(
+                                'assets/images/1.jpg',
+                                fit: BoxFit.cover,
+                                width: 120,
+                                height: 90,
                               ),
                             ),
                           ),
                           Padding(
                             padding: EdgeInsets.only(right: 5),
-                            child: Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(15),
-                                child: Image.asset(
-                                  'assets/images/2.jpeg',
-                                  fit: BoxFit.cover,
-                                  width: 120,
-                                  height: 90,
-                                ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(15),
+                              child: Image.asset(
+                                'assets/images/2.jpeg',
+                                fit: BoxFit.cover,
+                                width: 120,
+                                height: 90,
                               ),
                             ),
                           ),
