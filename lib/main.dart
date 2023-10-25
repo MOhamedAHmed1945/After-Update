@@ -1,16 +1,19 @@
-import 'package:master/Models/profile_model.dart';
+//import 'package:master/Models/profile_model.dart';
 import 'package:master/Screens/intro_screen.dart';
 import 'package:master/Screens/nav_bar/nav_bar_screens/home_screen.dart';
 import 'package:master/Screens/nav_bar/main_navbar.dart';
 import 'package:master/Screens/nav_bar/nav_bar_screens/profile_screens/edit_profile_screen.dart';
 import 'package:master/constants/constants.dart';
+import 'Models/profile_model.dart';
 import 'Screens/nav_bar/nav_bar_screens/categories_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/adapters.dart';
+
+import 'Screens/nav_bar/nav_bar_screens/profile_screens/profile_screen.dart';
 void main() async {
   await Hive.initFlutter();
   await Hive.openBox(kProfileBox);
-  //Hive.registerAdapter(ProfileModelAdapter());
+  Hive.registerAdapter(ProfileModelAdapter());
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -21,15 +24,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'News App',
-      home:  const IntroScreen(),//EditeProfileScreen(),//IntroScreen(),
+      home:  IntroScreen(),//ProfileScreen(),//
       routes: {
         IntroScreen.introRoute: (context) => const IntroScreen(),
         MainNavBar.mainNavBarRoute: (context) => const MainNavBar(),
         HomeScreen.homeRoute: (context) => const HomeScreen(),
-        EditeProfileScreen.editeProfileRoute: (context) => EditeProfileScreen(),
+        EditeProfileScreen.editeProfileRoute: (context) => const EditeProfileScreen(),
+        ProfileScreen.profileRoute: (context) => ProfileScreen(),
         CategoriesScreen.categoriesScreenRoute: (context) => CategoriesScreen(),
         // DecorationCategoriesScreen.decorationCategoriesScreenRoute: (context) =>
-        //     DecorationCategoriesScreen(),
+        // DecorationCategoriesScreen(),
       },
     );
   }

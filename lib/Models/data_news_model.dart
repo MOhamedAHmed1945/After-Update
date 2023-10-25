@@ -1,5 +1,40 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+/*
+class DataNewsModel {
+  final String? titleNew;
+  final String? descriptionNew;
+  final String? imageNew;
+  final String?  publishedAtTime;//final DateTime? publishedAtTime;
+  final String? contentNew;
+  final String? sourceNew;
+  final String? linkMasterNew;
+  DataNewsModel({
+     this.titleNew = 'Elon Musk Reacts As Tesla Competitor Nikolas Shares Slump',
+     this.descriptionNew = 'The idea of establishing  came in the first 10 years of the 20th century and was firstly'
+         ' raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of'
+         ' the High School Students Club, which was established in 1905',
+     this.imageNew = 'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
+     this.publishedAtTime = '07 May  07:19',
+    this.contentNew= 'The idea of establishing  came in the first 10 years of the 20th century and was firstly'
+        ' raised by Omar Lotfy who was a student in the Egyptian Law School during his presidency of'
+        ' the High School Students Club, which was established in 1905',
+    this.sourceNew = 'Self',
+    this.linkMasterNew = 'https://th.bing.com/th/id/OIP.rvSWtRd_oPRTwDoTCmkP5gHaE8?pid=ImgDet&rs=1',
+  });
 
+  factory DataNewsModel.fromJson(Map<String, dynamic> json) {
+    return DataNewsModel(
+      titleNew: json['title'].toString(),
+      descriptionNew: json['description'].toString(),
+      imageNew: json['urlToImage'].toString(),
+      publishedAtTime: json['publishedAt'],// DateTime.parse(json['publishedAt']),
+      linkMasterNew : json['url'].toString(),
+      contentNew : json['content'].toString(),
+      sourceNew: json['source']['name'].toString(),
+    );
+  }
+}
+*/
 class DataNewsModel {
   final String titleNew;
   final String? descriptionNew;
@@ -8,9 +43,9 @@ class DataNewsModel {
   final String? contentNew;
   final String? sourceNew;
   final String? linkMasterNew;
-  DataNewsModel(  {
+  DataNewsModel({
     required this.titleNew,
-     this.descriptionNew,
+    this.descriptionNew,
     required this.imageNew,
     required this.publishedAtTime,
     this.contentNew,

@@ -9,7 +9,7 @@ import '../../../Widgets/custom_cart_categories_with_slider_home_screen.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 Future<List<DataNewsModel>> fetchArticles() async {
-  final apiUrl =
+  const apiUrl =
       'https://newsapi.org/v2/top-headlines?country=us&apiKey=537ad82052c14f69b6cc8a638ee6c341';
   final response = await http.get(Uri.parse(apiUrl));
   if (response.statusCode == 200) {

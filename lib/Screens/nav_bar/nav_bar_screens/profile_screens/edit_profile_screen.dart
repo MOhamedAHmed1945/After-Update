@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:master/Screens/nav_bar/nav_bar_screens/profile_screens/profile_screen.dart';
 import '../../../../Widgets/custom_TextFormFiled.dart';
-
-// ignore: must_be_immutable
 class EditeProfileScreen extends StatefulWidget {
   const EditeProfileScreen({Key? key}) : super(key: key);
   static String editeProfileRoute = 'editeProfileRoute';
-
   @override
   State<EditeProfileScreen> createState() => _EditeProfileScreenState();
 }
@@ -25,6 +23,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
   final GlobalKey<FormState> formKey = GlobalKey();
   AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
   String? email, userName, country, address, phoneNumber, age;
+  //ProfileModel? editProfileModel;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -60,10 +59,14 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                   onPressed: () {
                     if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
+                      Navigator.pushNamed(
+                          context, ProfileScreen.profileRoute);
                     } else {
                       autoValidateMode = AutovalidateMode.always;
                       setState(() {});
-                    }
+                    }/*
+                    Navigator.pushNamed(
+                        context, ProfileScreen.profileRoute);*/
                   },
                   icon: Icon(
                     Icons.save_alt,
@@ -140,6 +143,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                               textInputType: TextInputType.emailAddress,
                               onSaved: (value) {
                                 email = value;
+                               // editProfileModel?.email = value!;
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
@@ -159,6 +163,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                               textInputType: TextInputType.text,
                               onSaved: (value) {
                                 userName = value;
+                                //editProfileModel?.userName = value!;
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
@@ -177,6 +182,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                               textInputType: TextInputType.text,
                               onSaved: (value) {
                                 country = value;
+                                //editProfileModel?.country = value!;
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
@@ -194,7 +200,8 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                               controller: addressController,
                               textInputType: TextInputType.text,
                               onSaved: (value) {
-                                address = value;
+                               address = value;
+                                //editProfileModel?.address = value!;
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
@@ -213,6 +220,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                               textInputType: TextInputType.phone,
                               onSaved: (value) {
                                 phoneNumber = value;
+                               // editProfileModel?.phoneNumber = value! as int;
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {
@@ -231,6 +239,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                               textInputType: TextInputType.number,
                               onSaved: (value) {
                                 age = value;
+                                //editProfileModel?.age = value! as int;
                               },
                               validator: (value) {
                                 if (value!.isEmpty) {

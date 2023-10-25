@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../Models/data_news_model.dart';
 import 'package:intl/intl.dart';
+import '../Models/data_news_model.dart';
+
 
 class CustomCartHomeScreen extends StatelessWidget {
   final DataNewsModel newsModel;
@@ -29,7 +30,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: DecorationImage(
-                      image: NetworkImage(newsModel.imageNew),
+                      image: NetworkImage(newsModel.imageNew.toString()),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -48,7 +49,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                               horizontal: 10, vertical: 10),
                           child: Center(
                             child: Text(
-                              newsModel.contentNew.toString(),
+                              newsModel.descriptionNew.toString(),
                               style: TextStyle(
                                 fontFamily: "Avenir",
                                 fontSize: 16,
@@ -69,6 +70,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                 Text(
                   // newsModel.publishedAt.toString(),
                   formattedDate,
+
                   style: TextStyle(
                     fontFamily: "Times",
                     fontSize: 13,
@@ -79,7 +81,7 @@ class CustomCartHomeScreen extends StatelessWidget {
                   height: 7,
                 ),
                 Text(
-                  newsModel.titleNew,
+                  newsModel.titleNew.toString(),
                   style: TextStyle(
                     fontFamily: "League",
                     fontSize: 23,

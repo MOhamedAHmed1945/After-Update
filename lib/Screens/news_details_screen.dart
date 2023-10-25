@@ -9,7 +9,6 @@ class NewsDetailsScreen extends StatelessWidget {
   }) : super(key: key);
   static String detailsRoute = 'detailsRoute';
   final DataNewsModel dataNewsModel;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -88,7 +87,7 @@ class NewsDetailsScreen extends StatelessWidget {
                       SizedBox(height: 25),
                       Text(
 
-                        dataNewsModel.contentNew.toString(),
+                        dataNewsModel.descriptionNew.toString(),
                         style: TextStyle(
                           color: Colors.black54,
                           fontSize: 16,

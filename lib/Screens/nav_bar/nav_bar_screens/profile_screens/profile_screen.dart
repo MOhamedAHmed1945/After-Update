@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:master/Screens/nav_bar/nav_bar_screens/profile_screens/edit_profile_screen.dart';
 import 'package:master/Widgets/custom_cart_profile.dart';
-
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({Key? key,  }) : super(key: key);
   static String profileRoute = 'profileRoute';
-
+  //ProfileModel? dataNewsModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -41,7 +40,7 @@ class ProfileScreen extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         backgroundImage:
-                            AssetImage('assets/images/Education.jpeg'),
+                        AssetImage('assets/images/Education.jpeg'),
                         radius: 80,
                       ),
                     ],
@@ -97,20 +96,30 @@ class ProfileScreen extends StatelessWidget {
                           SizedBox(height: 30),
                           CustomCartProfile(
                             icon: Icons.flag_outlined,
-                            text: 'country',
+                            text: 'User Name',//dataNewsModel.userName,
                           ),
                           CustomCartProfile(
-                            icon: Icons.apartment_outlined,
-                            text: 'address',
+                            icon: Icons.flag_outlined,
+                            text: 'Email',//dataNewsModel.email,
                           ),
                           CustomCartProfile(
                             icon: Icons.phone_outlined,
-                            text: 'number',
+                            text: 'Phone Number',//dataNewsModel.phoneNumber.toString(),
                           ),
                           CustomCartProfile(
                             icon: Icons.hdr_auto_sharp,
-                            text: 'age',
+                            text:'Age', //dataNewsModel.age.toString(),
                           ),
+                          CustomCartProfile(
+                            icon: Icons.flag_outlined,
+                            text: 'Country',//dataNewsModel.country,
+                          ),
+                          CustomCartProfile(
+                            icon: Icons.apartment_outlined,
+                            text: 'Address'//dataNewsModel.address,
+                          ),
+
+
                         ],
                       ),
                     ],
